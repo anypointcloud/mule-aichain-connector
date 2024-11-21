@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cloud.anypoint</groupId>
 	<artifactId>mule-aichain-connector</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<version>1.2.0-SNAPSHOT</version>
 	<packaging>mule-extension</packaging>
 	<name>MuleSoft AI Chain Connector - Mule 4</name>
 	<description>The MuleSoft AI Chain Connector is designed to help developers easily build and manage AI-driven agents within the MuleSoft Anypoint Platform. It provides the tools and support needed to integrate Large Language Models (LLMs), embeddings, and other advanced AI services into MuleSoft applications.</description>
@@ -61,7 +61,7 @@
 		<formatterGoal>validate</formatterGoal>
 		<slf4jApi.version>2.0.7</slf4jApi.version>
 		<mule.sdk.api.version>0.9.0-rc1</mule.sdk.api.version>
-		<langchain4j.version>0.34.0</langchain4j.version> <!-- upgrade to support tools in Ollama -->
+		<langchain4j.version>0.35.0</langchain4j.version> <!-- upgrade to support tools in Ollama -->
 		<mapdb.version>3.1.0</mapdb.version>
 		<json.version>20240303</json.version>
 		<munit.input.directory>src/test/munit</munit.input.directory>
@@ -239,6 +239,7 @@
 			<artifactId>langchain4j-mistral-ai</artifactId>
 			<version>${langchain4j.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>dev.langchain4j</groupId>
 			<artifactId>langchain4j-hugging-face</artifactId>
@@ -284,6 +285,11 @@
 		<dependency>
 			<groupId>dev.langchain4j</groupId>
 			<artifactId>langchain4j-azure-open-ai</artifactId>
+			<version>${langchain4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>dev.langchain4j</groupId>
+			<artifactId>langchain4j-google-ai-gemini</artifactId>
 			<version>${langchain4j.version}</version>
 		</dependency>
 		<dependency>
